@@ -5,7 +5,7 @@
         <i class="fas fa-arrow-left"></i>
       </div>
       <h1 class="title-main">Taivaas</h1>
-      <div class="header-shadow">
+      <div class="header-shadow" v-on:click="displayPlaylist">
         <i class="fas fa-bars"></i>
       </div>
     </header>
@@ -28,7 +28,7 @@
           <button class="next" v-on:click="next"><i class="fas fa-forward"></i></button>
         </div>
       </section>
-      <section class="playlist">
+      <section class="playlist" v-if="this.isPlaylist">
         <h3>The Playlist</h3>
         <button v-for="song in songs" :key="song.src" @click="play(song)" :class="(song.src == current.src) ? 'song playing' : 'song'">
           {{ song.title }}
@@ -47,36 +47,37 @@ export default {
       current: {},
       index: 0,
       isPlaying: false,
+      isPlaylist: false,
       progressWidth: null,
       songs: [
         {
           title: 'Affection',
           artist: 'Cigrattes after Sex',
-          thumbnail: require('../assets/thumbnail-1.jpg'),
+          thumbnail: 'https://raw.githubusercontent.com/Sumer16/taivaas-music-player/gh-pages/img/thumbnail-1.ced213fb.jpg',
           src: require('../assets/affection.mp3')
         },
         {
           title: 'Apocalypse',
           artist: 'Cigrattes after Sex',
-          thumbnail: require('../assets/thumbnail-2.jpg'),
+          thumbnail: 'https://raw.githubusercontent.com/Sumer16/taivaas-music-player/gh-pages/img/thumbnail-2.fc2290e1.jpg',
           src: require('../assets/apocalypse.mp3')
         },
         {
           title: 'Boom Clap',
           artist: 'Charlie XCX',
-          thumbnail: require('../assets/thumbnail-3.jpg'),
+          thumbnail: 'https://raw.githubusercontent.com/Sumer16/taivaas-music-player/gh-pages/img/thumbnail-3.7e2dfde1.jpg',
           src: require('../assets/boom-clap.mp3')
         },
         {
           title: 'Wake Me Up',
           artist: 'Avicii',
-          thumbnail: require('../assets/thumbnail-5.jpg'),
+          thumbnail: 'https://raw.githubusercontent.com/Sumer16/taivaas-music-player/gh-pages/img/thumbnail-5.64926f5d.jpg',
           src: require('../assets/wake-me-up.mp3')
         },
         {
           title: 'Photograph',
           artist: 'Ed Sheeren',
-          thumbnail: require('../assets/thumbnail-4.jpg'),
+          thumbnail: 'https://raw.githubusercontent.com/Sumer16/taivaas-music-player/gh-pages/img/thumbnail-4.c0d96e34.jpg',
           src: require('../assets/photograph.mp3')
         }        
       ],
@@ -128,6 +129,9 @@ export default {
 
       this.player.currentTime = (clickX / width) * duration;
       this.updateProgress();
+    },
+    displayPlaylist() {
+      this.isPlaylist = !this.isPlaylist;
     }
   },
   created() {
@@ -144,9 +148,10 @@ export default {
 body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  background-color: #DEE9FD;
 }
 header{
-  padding: 25px;
+  padding: 18px 25px;
   text-align: center;
   color: gray;
   display: flex;
@@ -162,23 +167,22 @@ main{
   width: 100%;
   max-width: 375px;
   margin: 0 auto;
-  padding: 25px;
+  padding: 15px 25px;
 }
 .header-shadow{
   padding:15px;
   border-radius:50%;
-  box-shadow: -2px -2px 6px 3px #FBFFFF, 2px 2px 4px 3px #B7C4DD;
+  box-shadow: -6px -6px 20px #FBFFFF, 6px 6px 20px #b4c3df;
   border: 0.1px solid #c4cae696;
 }
 .header-shadow:hover{
-  color: #525252;
-  background-image: linear-gradient(to right, #BDBDBD, #525252);
+  /* background-image: linear-gradient(to right, #BDBDBD, #525252); */
   border: 0.1px solid #b7c4ddaf;
-  box-shadow: 2px 2px 4px 3px #FBFFFF, -2px -2px 6px 3px #B7C4DD;
+  box-shadow: inset -6px -6px 10px #FBFFFF, inset 6px 6px 20px #b4c3df;
 }
 .thumbnail{
   text-align: center;
-  box-shadow: -5px -5px 15px 3px #FBFFFF, 5px 5px 25px 15px #B7C4DD;
+  box-shadow: -6px -6px 20px #FBFFFF, 6px 6px 20px #a8b5cc;
 }
 .thumbnail, img{
   border-radius: 55%;
@@ -188,10 +192,10 @@ img{
 }
 
 .player{
-  margin: 2rem 0;
+  margin: 2rem 0 1rem 0;
 }
 .song-title{
-  margin: 3rem 0;
+  margin: 3rem 0 1.5rem 0;
   text-align: center;
 }
 .song-title h2{
@@ -209,7 +213,7 @@ img{
   background-color: #c8d9ee;
   border-radius: 5px;
   cursor: pointer;
-  margin: 2rem 0;
+  margin: 2rem 0 1rem 0;
   padding: 5px 0;
   height: 5px;
   width: 100%;
@@ -258,17 +262,16 @@ button{
   border-radius: 50%;
   color: gray;
   border: 0.1px solid #b7c4ddaf;
-  box-shadow: -2px -1px 15px 3px #FBFFFF, 2px 4px 5px 3px #B7C4DD;
+  box-shadow: -6px -6px 20px #FBFFFF, 6px 6px 20px #B7C4DD;
 }
 
 .play:hover,
 .next:hover,
 .previous:hover,
 .pause:hover{
-  color: #525252;
-  background-image: linear-gradient(to right, #BDBDBD, #525252);
+  /* background-image: linear-gradient(to right, #BDBDBD, #525252); */
   border: 0.1px solid #b7c4ddaf;
-  box-shadow: 2px 4px 5px 3px #FBFFFF, -2px -1px 15px 3px #B7C4DD;
+  box-shadow: inset -6px -6px 10px #FBFFFF, inset 6px 6px 20px #B7C4DD;
 }
 
 button:hover{
@@ -277,7 +280,7 @@ button:hover{
 
 .playlist{
   padding: 0 30px;
-  margin: 3rem 0;
+  margin: 1rem 0;
 }
 .playlist h3{
   color: #212121;
@@ -308,4 +311,12 @@ button:hover{
   box-shadow: -2px -1px 15px 3px #FBFFFF, 2px 4px 5px 3px #B7C4DD;
   background-image: linear-gradient(to right, #525252, #BDBDBD);
 }
+
+@media screen and (max-width: 320px) {
+  img{
+    width: 270px;
+    height: 270px;
+  }
+}
+
 </style>
