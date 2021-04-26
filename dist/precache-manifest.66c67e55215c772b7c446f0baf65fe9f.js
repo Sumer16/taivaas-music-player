@@ -4,11 +4,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/taivaas-music-player/css/about.985bce55.css"
   },
   {
-    "revision": "a3027f2184c37ce3490a",
+    "revision": "ce1a327befc596918625",
     "url": "/taivaas-music-player/css/app.e2a896e6.css"
   },
   {
-    "revision": "41fd31b2dcf60c88af7d21424effc9dc",
+    "revision": "4c06b23851c99617a5c168fee265cec2",
     "url": "/taivaas-music-player/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/taivaas-music-player/js/about.26ed6fa5.js"
   },
   {
-    "revision": "a3027f2184c37ce3490a",
-    "url": "/taivaas-music-player/js/app.4bc4b08b.js"
+    "revision": "ce1a327befc596918625",
+    "url": "/taivaas-music-player/js/app.eb056e6a.js"
   },
   {
     "revision": "8f8c282db62f517264d2",

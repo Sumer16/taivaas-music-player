@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/taivaas-music-player/precache-manifest.0f3a6c91e3e1a3d1be04d5fff0fbe7b1.js"
+  "/taivaas-music-player/precache-manifest.66c67e55215c772b7c446f0baf65fe9f.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "taivaas-music-app"});
