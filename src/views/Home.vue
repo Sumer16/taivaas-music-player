@@ -34,6 +34,14 @@
           {{ song.title }}
         </button>
       </section>
+      <div class="about" id="about">
+        <div class="about-title">
+          <h1>Taivaas</h1>
+        </div>
+        <div class="about-foot">
+          <p>All Rights Reserved.</p> 
+        </div>
+      </div>
     </main>
   </div>
 </template>
@@ -151,7 +159,7 @@ body {
   background-color: #DEE9FD;
 }
 header{
-  padding: 10px 25px;
+  padding: 20px 25px;
   text-align: center;
   color: gray;
   display: flex;
@@ -318,5 +326,4 @@ button:hover{
     height: 270px;
   }
 }
-
 </style>
