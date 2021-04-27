@@ -53,31 +53,31 @@ export default {
         {
           title: 'Affection',
           artist: 'Cigrattes after Sex',
-          thumbnail: 'https://raw.githubusercontent.com/Sumer16/taivaas-music-player/gh-pages/img/thumbnail-1.ced213fb.jpg',
+          thumbnail: require('../assets/thumbnail-1.jpg'),
           src: require('../assets/affection.mp3')
         },
         {
           title: 'Apocalypse',
           artist: 'Cigrattes after Sex',
-          thumbnail: 'https://raw.githubusercontent.com/Sumer16/taivaas-music-player/gh-pages/img/thumbnail-2.fc2290e1.jpg',
+          thumbnail: require('../assets/thumbnail-2.jpg'),
           src: require('../assets/apocalypse.mp3')
         },
         {
           title: 'Boom Clap',
           artist: 'Charlie XCX',
-          thumbnail: 'https://raw.githubusercontent.com/Sumer16/taivaas-music-player/gh-pages/img/thumbnail-3.7e2dfde1.jpg',
+          thumbnail: require('../assets/thumbnail-3.jpg'),
           src: require('../assets/boom-clap.mp3')
         },
         {
           title: 'Wake Me Up',
           artist: 'Avicii',
-          thumbnail: 'https://raw.githubusercontent.com/Sumer16/taivaas-music-player/gh-pages/img/thumbnail-5.64926f5d.jpg',
+          thumbnail: require('../assets/thumbnail-5.jpg'),
           src: require('../assets/wake-me-up.mp3')
         },
         {
           title: 'Photograph',
           artist: 'Ed Sheeren',
-          thumbnail: 'https://raw.githubusercontent.com/Sumer16/taivaas-music-player/gh-pages/img/thumbnail-4.c0d96e34.jpg',
+          thumbnail: require('../assets/thumbnail-4.jpg'),
           src: require('../assets/photograph.mp3')
         }        
       ],
