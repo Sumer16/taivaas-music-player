@@ -151,7 +151,7 @@ body {
   background-color: #DEE9FD;
 }
 header{
-  padding: 18px 25px;
+  padding: 10px 25px;
   text-align: center;
   color: gray;
   display: flex;
@@ -167,7 +167,7 @@ main{
   width: 100%;
   max-width: 375px;
   margin: 0 auto;
-  padding: 15px 25px;
+  padding: 10px 25px;
 }
 .header-shadow{
   padding:15px;

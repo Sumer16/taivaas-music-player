@@ -25,8 +25,8 @@
 }
 
 #nav {
-  padding: 15px;
-  position: fixed;
+  padding: 10px 0 0 0;
+  margin: auto;
   width: 100%;
 }
 
